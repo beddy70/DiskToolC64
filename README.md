@@ -56,9 +56,11 @@ Format drive : mondisk.d64 named : empty
  ``` 
  ### Ecrire un fichier local dans une image D64
 
- ```
-java -jar DiskToolC64.jar mondisk.d64 -p 
+Dans l'argument [new name] n'ajoutez pas l'extension!
 
-Format drive : mondisk.d64 named : /users/eddy/c64/games/pacman.prg pacman.prg
+ ```
+java -jar DiskToolC64.jar mondisk.d64 -p /users/eddy/c64/games/pacman.prg pacman
  
  ``` 
+ 
+ 
