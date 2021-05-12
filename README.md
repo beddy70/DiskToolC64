@@ -74,7 +74,7 @@ file found : SPRITE.PRG
 SPRITE
 size=15748 | real size=15653
  ``` 
- ### Lister les fichiers contenus dans un image D64
+### Lister les fichiers contenus dans une image D64
  
  ```
 java -jar DiskToolC64.jar test.d64 -d
@@ -86,4 +86,25 @@ TEST.PRG                15748 bytes
 SPRITE.PRG              15748 bytes
 ------------------------------------
 2 file(s) freespace 137160 bytes
+ ```
+ 
+### Supprimer un fichier dans une image D64
+ 
+ ```
+java -jar DiskToolC64.jar test.d64 -r PIPO
+
+PIPO removed
+ ```
+Si vous lister l'image D64, vous pourrez noter que PIPO à unenouvelle extension .DEL. Le fichier est toujours présent dans l'image mais il ne consome plus d'espace et sera supprimer par l'ajout d'une nouveau fichier:
+
+ ```
+java -jar DiskToolC64.jar test.d64 -d
+Drive:'PEA_1541_DRIVE' - Version:0.1
+
+------------------------------------
+TEST.PRG                15748 bytes
+SPRITE.PRG              15748 bytes
+PIPO.DEL                15748 bytes
+------------------------------------
+3 file(s) freespace 137160 bytes
  ```
