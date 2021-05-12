@@ -104,7 +104,7 @@ Drive:'PEA_1541_DRIVE' - Version:0.1
 ------------------------------------
 TEST.PRG                15748 bytes
 SPRITE.PRG              15748 bytes
-*PIPO.DEL                15748 bytes*
+PIPO.DEL                15748 bytes
 ------------------------------------
 3 file(s) freespace 137160 bytes
  ```
