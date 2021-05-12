@@ -35,4 +35,17 @@ Usage:
  [D64 image file] -r [cbm file]                        -> remove file
 (c) Written by Eddy Briere (2019) - peassembler@yahoo.fr http://somanybits.com
  ``` 
+## Exemples
 
+### Création d'une image D64
+
+ ```
+java -jar DiskToolC64.jar mondisk.d64 -c mydisk
+ 
+ ``` 
+ ### Formatage d'une image D64
+
+ ```
+java -jar DiskToolC64.jar mondisk.d64 -f empty
+ 
+ ``` 
