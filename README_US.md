@@ -88,14 +88,14 @@ SPRITE.PRG              15748 bytes
 2 file(s) freespace 137160 bytes
  ```
  
-### delete fiel from d64 image
+### Delete fiel from d64 image
  
  ```
 java -jar DiskToolC64.jar mondisk.d64 -r PIPO
 
 PIPO removed
  ```
-Si vous lister l'image D64, vous pourrez noter que PIPO à une nouvelle extension [.DEL]. Le fichier est toujours présent dans l'image mais il ne consome plus d'espace et sera supprimer par l'ajout d'un nouveau fichier:
+In the directory of the D64 image, you'll note that PIPO file have a new extention [.DEL]. In the directory of the D64 image, you'll note that PIPO file have a new extention [.DEL]. This file is still in the D64 image but don't consume space and will be totaly destroy by a next the file added in the image.
 
  ```
 java -jar DiskToolC64.jar mondisk.d64 -d
