@@ -63,7 +63,7 @@ java -jar DiskToolC64.jar mondisk.d64 -p /users/eddy/c64/games/pacman.prg pacman
  
  ``` 
  
- ### copier un fichier d'une image D64 sur le disque local
+ ### Copier un fichier d'une image D64 sur le disque local
 
 Dans l'argument [new name] n'ajoutez pas l'extension!
 
@@ -74,3 +74,16 @@ file found : SPRITE.PRG
 SPRITE
 size=15748 | real size=15653
  ``` 
+ ### Lister les fichiers contenus dans un image D64
+ 
+ ```
+java -jar DiskToolC64.jar test.d64 -d
+
+Drive:'PEA_1541_DRIVE' - Version:0.1
+
+------------------------------------
+TEST.PRG                15748 bytes
+SPRITE.PRG              15748 bytes
+------------------------------------
+2 file(s) freespace 137160 bytes
+ ```
