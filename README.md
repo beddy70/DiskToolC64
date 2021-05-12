@@ -31,7 +31,7 @@ Usage:
  [D64 image file] -f [drivename]                       -> format disk
  [D64 image file] -d                                   -> read directory
  [D64 image file] -p [local file] [new name]           -> put file
- [D64 image file] -g [cbm file]   [local destination ] -> get file
+ [D64 image file] -g [cbm file]   [local path]         -> get file
  [D64 image file] -r [cbm file]                        -> remove file
 (c) Written by Eddy Briere (2019) - peassembler@yahoo.fr http://somanybits.com
  ``` 
