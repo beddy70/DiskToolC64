@@ -13,6 +13,10 @@ l'outils proposé ici, vous permettra :
 * d'écrire/lire ou supprimer des fichiers dans une image D64
 * de lister les fichiers contenus dans l'image D64
 
+DiskToolC64 est écrit en java et demande l'installation sur votre système de java runtime 8 ou suppérieur :
+
+![alt text](https://www.oracle.com/fr/java/technologies/javase-jre8-downloads.html)
+
 ## Utilisation
 
 
