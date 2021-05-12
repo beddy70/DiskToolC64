@@ -65,7 +65,7 @@ java -jar DiskToolC64.jar mondisk.d64 -p /users/eddy/c64/games/pacman.prg pacman
  
  ### Copier un fichier d'une image D64 sur le disque local
 
-Dans l'argument [new name] n'ajoutez pas l'extension!
+Dans l'argument [cbmfile] n'ajoutez pas l'extension!
 
  ```
 java -jar DiskToolC64.jar mondisk.d64 -g SPRITE .
