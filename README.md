@@ -26,13 +26,13 @@ java -jar DiskToolC64.jar
 Usage :
 
  ```
- Usage:
-ReadCBMFSD64 [D64 image file] -c [drivename]                       -> create and format disk
-ReadCBMFSD64 [D64 image file] -f [drivename]                       -> format disk
-ReadCBMFSD64 [D64 image file] -d                                   -> read directory
-ReadCBMFSD64 [D64 image file] -p [local file] [new name]           -> put file
-ReadCBMFSD64 [D64 image file] -g [cbm file]   [locla destination ] -> get file
-ReadCBMFSD64 [D64 image file] -r [cbm file]                        -> remove file
+Usage:
+ [D64 image file] -c [drivename]                       -> create and format disk
+ [D64 image file] -f [drivename]                       -> format disk
+ [D64 image file] -d                                   -> read directory
+ [D64 image file] -p [local file] [new name]           -> put file
+ [D64 image file] -g [cbm file]   [locla destination ] -> get file
+ [D64 image file] -r [cbm file]                        -> remove file
 (c) Written by Eddy Briere (2019) - peassembler@yahoo.fr http://somanybits.com
  ``` 
 
