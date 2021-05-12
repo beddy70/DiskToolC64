@@ -28,13 +28,13 @@ public class ReadCBMFSD64 {
 
         if (args.length == 0) {
             System.out.println("Usage:");
-            System.out.println("ReadCBMFSD64 [D64 image file] -c [drivename]                       -> create and format disk");
-            System.out.println("ReadCBMFSD64 [D64 image file] -f [drivename]                       -> format disk");
-            System.out.println("ReadCBMFSD64 [D64 image file] -d                                   -> read directory");
-            System.out.println("ReadCBMFSD64 [D64 image file] -p [local file] [new name]           -> put file");
-            System.out.println("ReadCBMFSD64 [D64 image file] -g [cbm file]   [locla destination ] -> get file");
-            System.out.println("ReadCBMFSD64 [D64 image file] -r [cbm file]                        -> remove file");
-            System.out.println("(c) Written by Eddy Briere - peassembler@yahoo.f http://somanybits.com");
+            System.out.println(" [D64 image file] -c [drivename]                       -> create and format disk");
+            System.out.println(" [D64 image file] -f [drivename]                       -> format disk");
+            System.out.println(" [D64 image file] -d                                   -> read directory");
+            System.out.println(" [D64 image file] -p [local file] [new name]           -> put file");
+            System.out.println(" [D64 image file] -g [cbm file]   [local path]         -> get file");
+            System.out.println(" [D64 image file] -r [cbm file]                        -> remove file");
+            System.out.println("(c) Written by Eddy Briere (2019) - peassembler@yahoo.fr http://somanybits.com");
             System.exit(0);
         }
 
@@ -102,10 +102,15 @@ public class ReadCBMFSD64 {
                     for (FileDescriptor diskfiles : dir.getFiles()) {
                         //System.out.println(">"+diskfiles.getFilename());
                         if (diskfiles.getFilename() == null ? args[2] == null : diskfiles.getFilename().equalsIgnoreCase(args[2])) {
-                            System.out.println("file found : " + diskfiles.getFilename());
+                            String strext = "";
+                            if (diskfiles.getParam(FileSystemCBM.CBM_PARAM_FILETYPE) != null) {
+                                strext = ".PRG";
+                            }
+                            System.out.println("file found : " + diskfiles.getFilename()+strext);
                             byte[] data = fscbm.getFile(diskfiles);
+
                             //System.out.println("data " + data.length);
-                            try (FileOutputStream fos = new FileOutputStream(args[3] + "/" + args[2])) {
+                            try (FileOutputStream fos = new FileOutputStream(args[3] + "/" + args[2] + strext)) {
                                 fos.write(data);
                             }
                         }
@@ -121,7 +126,7 @@ public class ReadCBMFSD64 {
                         if (diskfiles.getFilename() == null ? args[2] == null : diskfiles.getFilename().equalsIgnoreCase(args[2])) {
                             //System.out.println("file found " + diskfiles.getFiletype());
                             fscbm.removeFile(diskfiles);
-                            System.out.println(diskfiles.getFilename()+" removed");
+                            System.out.println(diskfiles.getFilename() + " removed");
                         }
                     }
 

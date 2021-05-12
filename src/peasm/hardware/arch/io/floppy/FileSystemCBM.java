@@ -355,7 +355,7 @@ public class FileSystemCBM implements FilesSystem {
             }
 
         }
-        System.out.println("size=" + fd.getParam(CBM_PARAM_FILESIZE) + " realsize=" + realsize);
+        System.out.println("size=" + fd.getParam(CBM_PARAM_FILESIZE) + " | real size=" + realsize);
         return data;
     }
 
