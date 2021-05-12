@@ -59,6 +59,6 @@ Format drive : mondisk.d64 named : empty
  ```
 java -jar DiskToolC64.jar mondisk.d64 -p 
 
-Format drive : mondisk.d64 named : /users/eddy/c§'/games/pacman.prg pacman.prg
+Format drive : mondisk.d64 named : /users/eddy/c64/games/pacman.prg pacman.prg
  
  ``` 
