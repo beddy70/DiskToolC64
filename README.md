@@ -31,7 +31,7 @@ Usage:
  [D64 image file] -f [drivename]                       -> format disk
  [D64 image file] -d                                   -> read directory
  [D64 image file] -p [local file] [new name]           -> put file
- [D64 image file] -g [cbm file]   [locla destination ] -> get file
+ [D64 image file] -g [cbm file]   [local destination ] -> get file
  [D64 image file] -r [cbm file]                        -> remove file
 (c) Written by Eddy Briere (2019) - peassembler@yahoo.fr http://somanybits.com
  ``` 
@@ -52,5 +52,13 @@ Format drive : mondisk.d64 named : mydisk
 java -jar DiskToolC64.jar mondisk.d64 -f empty
 
 Format drive : mondisk.d64 named : empty
+ 
+ ``` 
+ ### Ecrire un fichier local dans une image D64
+
+ ```
+java -jar DiskToolC64.jar mondisk.d64 -p 
+
+Format drive : mondisk.d64 named : game.prg mygame.prg
  
  ``` 
