@@ -41,11 +41,16 @@ Usage:
 
  ```
 java -jar DiskToolC64.jar mondisk.d64 -c mydisk
+
+Create drive : mondisk.d64
+Format drive : mondisk.d64 named : mydisk
  
  ``` 
  ### Formatage d'une image D64
 
  ```
 java -jar DiskToolC64.jar mondisk.d64 -f empty
+
+Format drive : mondisk.d64 named : empty
  
  ``` 
