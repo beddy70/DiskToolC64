@@ -74,7 +74,7 @@ public class FileSystemCBM implements FilesSystem {
 
     @Override
     public String getVersion() {
-        return "0.5";
+        return "0.6";
     }
 
     @Override
@@ -411,19 +411,16 @@ public class FileSystemCBM implements FilesSystem {
             bam_sector[BAM_OFFSET_TABLE + 2 + (i * 4)] = (byte) 0xff;
             switch (numberOfSector) {
                 case 21:
-                    bam_sector[BAM_OFFSET_TABLE + 3 + (i * 4)] = (byte) 0x1f;
-                    break;
-                case 20:
-                    bam_sector[BAM_OFFSET_TABLE + 3 + (i * 4)] = (byte) 0x0f;
+                    bam_sector[BAM_OFFSET_TABLE + 3 + (i * 4)] = (byte) 0xf8;
                     break;
                 case 19:
-                    bam_sector[BAM_OFFSET_TABLE + 3 + (i * 4)] = (byte) 0x07;
+                    bam_sector[BAM_OFFSET_TABLE + 3 + (i * 4)] = (byte) 0xe0;
                     break;
                 case 18:
-                    bam_sector[BAM_OFFSET_TABLE + 3 + (i * 4)] = (byte) 0x03;
+                    bam_sector[BAM_OFFSET_TABLE + 3 + (i * 4)] = (byte) 0xc0;
                     break;
                 case 17:
-                    bam_sector[BAM_OFFSET_TABLE + 3 + (i * 4)] = (byte) 0x01;
+                    bam_sector[BAM_OFFSET_TABLE + 3 + (i * 4)] = (byte) 0x80;
                     break;
 
             }
@@ -572,6 +569,7 @@ public class FileSystemCBM implements FilesSystem {
             if (sectorRead[1] == 1) {
                 sectorRead[1] = 18;
             }
+             dev.writeSector(BAM_TRACK_NUMBER, sectordir, sectorRead); //<- check if it's before the if or there ??? 
             //System.out.println("allow new dir " + sectorRead[0] + " " + sectorRead[1]);
 
         }
